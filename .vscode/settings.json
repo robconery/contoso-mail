@@ -1,0 +1,15 @@
+{
+  // Enable inline edits from Copilot Chat extension
+  "github.copilot.advanced": {
+    "inlineEdits": {
+      "enabled": true,
+      "showInStatusBar": true
+    },
+    "debug.overrideEngine": "chat-v3"  
+  },
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "text": "Generate a concise and descriptive commit message based on the changes made in the code. The message should summarize the purpose of the changes and any relevant details that would help other developers understand the context of the commit. Avoid using generic messages like 'Update code' or 'Fix bug' and instead provide specific information about what was changed and why. Include any relevant keywords or references to issues, pull requests, or features that are associated with the changes. The commit message should be clear and informative, making it easier for other developers to review the changes and understand the intent behind them. Aim for a message that is concise yet comprehensive, ideally around 50-72 characters for the subject line and a more detailed description in the body if necessary. Make sure to follow the conventional commit format if your project uses it, which typically includes a type (e.g., feat, fix, docs), an optional scope, and a concise description of the change. For example, 'feat(auth): add login functionality' or 'fix(api): resolve issue with data fetching'. This will help maintain consistency in your commit history and make it easier for others to understand the changes at a glance." 
+    }
+  ],
+}
