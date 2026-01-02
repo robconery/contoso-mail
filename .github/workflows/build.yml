@@ -3,13 +3,13 @@ name: Build
 on:
   push:
     paths:
-      - '01-flow/**'
+      - 'Commands/**'
     branches:
       - main
       - develop
   pull_request:
     paths:
-      - '01-flow/**'
+      - 'Commands/**'
     branches:
       - main
       - develop
