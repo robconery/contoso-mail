@@ -1,3 +1,3 @@
 # Contoso Mail Project
 
-This is for the Atmosera GitHub Developer Training course... TBD
+This is for the Atmosera GitHub Developer Training course... Coming Soon!
