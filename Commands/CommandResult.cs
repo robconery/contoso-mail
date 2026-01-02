@@ -1,4 +1,6 @@
 namespace Contoso.Data;
+
+//This is a comment
 public class CommandResult
 {
   public required dynamic Data { get; set; }
