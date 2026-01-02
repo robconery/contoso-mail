@@ -1,0 +1,37 @@
+name: Build
+
+on:
+  push:
+    paths:
+      - '01-flow/**'
+    branches:
+      - main
+      - develop
+  pull_request:
+    paths:
+      - '01-flow/**'
+    branches:
+      - main
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '9.0.x'
+        
+    - name: Restore dependencies
+      run: dotnet restore Contoso.Mail.csproj
+      
+    - name: Build
+      run: dotnet build Contoso.Mail.csproj --configuration Release --no-restore
+      
+    - name: Run tests
+      run: dotnet test Contoso.Mail.csproj --configuration Release --no-build --verbosity normal
